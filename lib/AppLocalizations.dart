@@ -20,6 +20,9 @@ class AppLocalizations {
       AppLocalizationsDelegate();
 
   Future loadTranslateFile(String lng) async {
+    // String _langFile =
+    //     await rootBundle.loadString('assets/l10n/${locale.languageCode}.json');   //uncomment this if u want device language
+
     String _langFile = await rootBundle.loadString('assets/l10n/$lng');
 
     Map<String, dynamic> _json = jsonDecode(_langFile);
